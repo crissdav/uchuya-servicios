@@ -217,13 +217,18 @@
   .contact-card a{color:var(--oro-brillo);font-weight:500;}
   .map-slot{
     border:1px dashed rgba(212,175,55,.45);border-radius:var(--radius);
-    min-height:340px;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;
+    min-height:340px;display:flex;flex-direction:column;gap:16px;align-items:stretch;justify-content:center;
     background:repeating-linear-gradient(45deg, rgba(212,175,55,.03), rgba(212,175,55,.03) 10px, transparent 10px, transparent 20px);
     color:var(--gris);text-align:center;padding:30px;
   }
   .map-slot svg{color:var(--oro);}
   .map-slot b{color:var(--oro-brillo);font-family:var(--font-title);font-size:26px;font-weight:600;}
   .map-slot span{font-size:14px;letter-spacing:.14em;text-transform:uppercase;}
+  .map-card{display:flex;align-items:center;gap:12px;width:100%;background:var(--negro-card);border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:16px 18px;color:var(--oro-brillo);transition:transform .2s ease, background .2s ease, border-color .2s ease;text-align:left;}
+  .map-card:hover{border-color:var(--oro);transform:translateY(-2px);background:rgba(212,175,55,.08);}
+  .map-card svg{color:var(--oro);flex:none;margin-top:2px;}
+  .map-card b{display:block;font-size:15.5px;color:var(--oro-brillo);}
+  .map-card small{color:var(--gris);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;}
 
   footer.site-foot{border-top:1px solid rgba(212,175,55,.25);background:var(--negro-suave);padding:54px 0 30px;}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;}
@@ -526,14 +531,22 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             <div>
               <h4>Horario de atención</h4>
-              <p>9:00 a.m. — 1:00 p.m.<br>3:30 p.m. — 8:00 p.m.</p>
+              <p>Lunes a Sábado<br>9:00 a.m. — 1:00 p.m.<br>3:30 p.m. — 8:00 p.m.</p>
             </div>
           </div>
         </div>
         <div class="map-slot">
-          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <b>Ubicación de la clínica</b>
-          <span>Mapa de Google Maps aquí</span>
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="margin:0 auto;"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <b>Encuéntranos en Google Maps</b>
+          <span>Abre la ubicación de tu sede</span>
+          <a class="map-card" href="https://maps.app.goo.gl/KtQuXMjXDyTDKTi57" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><b>Jr. José Prato 277 · Tingo María</b><small>Abrir en Google Maps</small></span>
+          </a>
+          <a class="map-card" href="https://maps.app.goo.gl/g8WyB7PbthFrMDmR8" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><b>Av. Alameda 425 · Tingo María</b><small>Abrir en Google Maps</small></span>
+          </a>
         </div>
       </div>
     </div>
