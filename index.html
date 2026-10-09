@@ -4,11 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clínica Dental Uchuya Premium — Sonrisas perfectas, cuidado premium</title>
+<meta name="description" content="Clínica Dental Uchuya Premium de Meilyng. Limpieza, ortodoncia, blanqueamiento, implantes, endodoncia, carillas y odontopediatría en Tingo María y Aucayacu. Llámanos para agendar tu cita.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clínica Dental Uchuya Premium">
+<meta property="og:title" content="Clínica Dental Uchuya Premium — Sonrisas perfectas, cuidado premium">
+<meta property="og:description" content="Atención odontológica de alta calidad con tecnología moderna y trato personalizado para ti y tu familia.">
+<meta property="og:image" content="assets/logo-hero.png">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clínica Dental Uchuya Premium">
+<meta name="twitter:description" content="Atención odontológica de alta calidad con tecnología moderna y trato personalizado.">
+<meta name="twitter:image" content="assets/logo-hero.png">
 <link rel="icon" type="image/png" href="assets/favicon-64.png">
 <link rel="preload" as="image" href="assets/logo-hero.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clínica Dental Uchuya Premium de Meilyng",
+  "image": "assets/logo-hero.png",
+  "telephone": "+51966746478",
+  "address": [
+    { "@type": "PostalAddress", "streetAddress": "Jr. José Prato 277", "addressLocality": "Tingo María", "addressCountry": "PE" },
+    { "@type": "PostalAddress", "streetAddress": "Av. Alameda 425", "addressLocality": "Tingo María", "addressCountry": "PE" },
+    { "@type": "PostalAddress", "streetAddress": "Av. Lima 455", "addressLocality": "Aucayacu", "addressCountry": "PE" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "15:30", "closes": "20:00" }
+  ],
+  "priceRange": "$$"
+}
+</script>
 <style>
   :root{
     --blanco:#FFFFFF;
@@ -285,7 +318,7 @@
       </ul>
       <div class="nav-cta">
         <div class="call-dd">
-          <button type="button" class="call-dd-btn gold" aria-label="Elegir número y llamar">Llama ahora</button>
+          <button type="button" class="call-dd-btn gold" aria-label="Elegir número y llamar" aria-haspopup="true" aria-expanded="false">Llama ahora</button>
           <div class="call-dd-menu" role="menu">
             <a class="call-dd-item" role="menuitem" href="tel:+51966746478">
               <svg class="dd-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
@@ -588,14 +621,15 @@
 <script>
   (function(){
     var dropdowns=document.querySelectorAll('.call-dd');
+    function closeAll(){dropdowns.forEach(function(d){d.classList.remove('open');var b=d.querySelector('.call-dd-btn');if(b){b.setAttribute('aria-expanded','false');}});}
     document.addEventListener('click',function(e){
       var dd=e.target.closest('.call-dd');
       if(dd){
         var wasOpen=dd.classList.contains('open');
-        dropdowns.forEach(function(d){d.classList.remove('open');});
-        if(!wasOpen){dd.classList.add('open');}
+        closeAll();
+        if(!wasOpen){dd.classList.add('open');var b=dd.querySelector('.call-dd-btn');if(b){b.setAttribute('aria-expanded','true');}}
       }else{
-        dropdowns.forEach(function(d){d.classList.remove('open');});
+        closeAll();
       }
     });
   })();
