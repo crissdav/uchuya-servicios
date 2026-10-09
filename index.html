@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clínica Dental Uchuya Premium — Sonrisas perfectas, cuidado premium</title>
-<link rel="icon" type="image/png" href="assets/logochuya-Photoroom.png">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="preload" as="image" href="assets/logo-hero.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -136,6 +137,7 @@
   .section-head.center .kicker{justify-content:center;}
   .section-head.center .kicker::after{content:"";width:34px;height:1px;background:var(--oro);}
   .section-title{font-size:clamp(30px,4.2vw,46px);margin-top:16px;}
+  .is-hidden{display:none;}
 
   .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
   .service-card{
@@ -269,7 +271,7 @@
     <input type="checkbox" id="nav-toggle">
     <nav class="nav">
       <a href="#inicio" class="brand" aria-label="Clínica Dental Uchuya — inicio">
-        <img src="assets/logochuya-Photoroom.png" alt="Logo Clínica Dental Uchuya Premium">
+        <img src="assets/logo-nav.png" alt="Logo Clínica Dental Uchuya Premium" width="54" height="64" decoding="async">
       </a>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
@@ -305,7 +307,7 @@
         <div class="hero-visual">
           <div class="halo"></div>
           <div class="halo-inner"></div>
-          <img class="hero-logo-mark" src="assets/logochuya-Photoroom.png" alt="Logo Clínica Dental Uchuya Premium">
+          <img class="hero-logo-mark" src="assets/logo-hero.png" alt="Logo Clínica Dental Uchuya Premium" width="338" height="400" fetchpriority="high" decoding="async">
           <div class="hero-score hs-1"><b>100%</b><small>Atención personalizada</small></div>
           <div class="hero-score hs-2"><b>+10 años</b><small>Experiencia cuidando sonrisas</small></div>
         </div>
@@ -443,7 +445,7 @@
     </div>
   </section>
 
-  <section id="testimonios">
+  <section id="testimonios" class="is-hidden" hidden>
     <div class="container">
       <div class="section-head center">
         <span class="kicker">Testimonios</span>
@@ -519,7 +521,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="assets/logochuya-Photoroom.png" alt="Logo Clínica Dental Uchuya Premium">
+        <img src="assets/logo-nav.png" alt="Logo Clínica Dental Uchuya Premium" width="54" height="64" loading="lazy" decoding="async">
         <p>Clínica Dental Uchuya Premium de Meilyng. Cuidamos tu sonrisa con excelencia, tecnología y un trato cercano.</p>
       </div>
       <div class="foot-col">
@@ -528,7 +530,7 @@
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
+<li hidden><a href="#testimonios">Testimonios</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -563,7 +565,7 @@
       <li>Set estándar de 8 servicios (se puede ajustar la lista).</li>
       <li>Datos de contacto, horarios y testimonios son placeholders.</li>
       <li>Faltan fotos reales de servicios: se usan ranuras placeholder para reemplazarlas.</li>
-      <li>Logo usado: logochuya-Photoroom.png.</li>
+      <li>Logo optimizado (assets/logo-nav.png, logo-hero.png y favicon) para carga rápida.</li>
     </ul>
     <h5>Sistema visual</h5>
     <div class="swatches">
